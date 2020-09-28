@@ -1,7 +1,7 @@
 # javascript-challenge
 This repository holds a practice assignment for javascript skills  
 
-The abbreviated instructions for this assignemtn are as follows:  
+The abbreviated instructions for this assignment are as follows:  
 
 ------------------------------------------------------------------  
 
