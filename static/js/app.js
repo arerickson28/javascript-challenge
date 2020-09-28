@@ -5,13 +5,18 @@ var tableData = data;
 console.log("hello ufo")
 
 
-
+//------------------------
 //INITIAL FILLING OF TABLE
+//------------------------
+
+
 //Select area of HTML to enter data
 var tbody = d3.select("tbody") ;
 
 //forEach loop to fill the HTML table with data
+
 data.forEach(function(ufo_sighting) 
+
 {
     
     var row = tbody.append("tr") ;
@@ -28,12 +33,10 @@ data.forEach(function(ufo_sighting)
 }) ;
 
 
-//-----------------------
+//--------------------------
 //CODE FOR THE FILTER SEARCH
+//--------------------------
 
-
-// IDENTIFY THE 'FILTER TABLE' BUTTON IN HTML BY ID
-//* <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button> */
 
 var button = d3.select("#filter-btn");
 
@@ -42,8 +45,9 @@ function handleClick()
 {
     console.log("the button was clicked")
     
+    
     //READING THE "ENTER A DATE" INPUT VALUE
-    //* <input class="form-control" id="datetime" type="text" placeholder="1/11/2011"> */
+
     var inputElement = d3.select("#datetime") ;
 
     var inputValue = inputElement.property("value");
@@ -55,8 +59,12 @@ function handleClick()
 
     console.log(filteredData);
 
-    //CREATING NEW HTML TABLE WITH FILTERED DATA
+    //CLEARING EXISTING TABLE TO MAKE WAY FOR NEW FILTERED DATA
+
     var tbody = d3.select("tbody") ;
+    tbody.html("") ;
+
+    // CREATING NEW HTML TABLE WITH FILTERED DATA
     filteredData.forEach(function(selected_sightings) 
 
         {
